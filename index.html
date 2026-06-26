@@ -1090,6 +1090,155 @@ footer{
   .services-grid{grid-template-columns:1fr;}
 }
 
+/* ── OFERTA BAR ── */
+.oferta-bar{
+  background:linear-gradient(90deg,#065f46,#059669);
+  color:white;text-align:center;
+  padding:0.6rem 1rem;
+  font-size:0.8rem;font-weight:400;
+  letter-spacing:0.01em;
+}
+.oferta-bar strong{color:#a7f3d0;font-weight:600;}
+.oferta-bar a{color:#6ee7b7;text-decoration:none;font-weight:500;text-decoration:underline;}
+.oferta-bar a:hover{color:white;}
+
+/* ── TRUST STRIP ── */
+.trust-strip{background:var(--blue);}
+.trust-strip-inner{
+  max-width:1280px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.trust-item{
+  display:flex;align-items:center;gap:0.6rem;
+  padding:0.85rem 1.25rem;
+  border-right:1px solid rgba(255,255,255,0.12);
+  color:white;
+}
+.trust-item:last-child{border-right:none;}
+.trust-item svg{width:17px;height:17px;fill:none;stroke:rgba(255,255,255,0.8);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
+.trust-label{font-size:0.78rem;font-weight:500;line-height:1.1;}
+.trust-sub{font-size:0.68rem;opacity:0.65;}
+@media(max-width:900px){
+  .trust-strip-inner{grid-template-columns:1fr 1fr;}
+  .trust-item:nth-child(2){border-right:none;}
+  .trust-item:nth-child(3){border-top:1px solid rgba(255,255,255,0.12);}
+  .trust-item:nth-child(4){border-top:1px solid rgba(255,255,255,0.12);border-right:none;}
+}
+
+/* ── ESTADÍSTICAS ── */
+.stats-section{background:var(--ink);padding:4.5rem 2.5rem;}
+.stats-inner{
+  max-width:1280px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  text-align:center;
+}
+.stat-item{padding:1.5rem 1rem;border-right:1px solid rgba(255,255,255,0.07);}
+.stat-item:last-child{border-right:none;}
+.stat-num{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(2.5rem,4.5vw,3.75rem);
+  color:white;line-height:1;
+  margin-bottom:0.5rem;display:block;
+}
+.stat-suffix{font-size:0.55em;color:#60a5fa;}
+.stat-label{font-size:0.8rem;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.4;}
+.stat-accent{display:block;width:28px;height:2px;background:var(--blue);border-radius:2px;margin:0.6rem auto 0;}
+@media(max-width:900px){
+  .stats-inner{grid-template-columns:1fr 1fr;}
+  .stat-item:nth-child(2){border-right:none;}
+  .stat-item:nth-child(3){border-top:1px solid rgba(255,255,255,0.07);}
+  .stat-item:nth-child(4){border-top:1px solid rgba(255,255,255,0.07);border-right:none;}
+}
+
+/* ── MARCAS ── */
+.marcas{padding:3rem 2.5rem;background:white;border-bottom:1px solid var(--gray-2);}
+.marcas-inner{max-width:1280px;margin:0 auto;}
+.marcas-title{text-align:center;font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray-3);margin-bottom:1.75rem;}
+.marcas-logos{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0.5rem 1.5rem;}
+.marca-chip{
+  background:var(--gray-1);border:1px solid var(--gray-2);
+  border-radius:8px;padding:0.55rem 1.1rem;
+  font-family:'Instrument Serif',serif;font-size:1rem;
+  color:var(--ink-2);letter-spacing:-0.01em;
+  transition:background 0.2s,color 0.2s,border-color 0.2s;white-space:nowrap;
+}
+.marca-chip:hover{background:var(--blue-light);color:var(--blue);border-color:rgba(26,86,219,0.2);}
+@media(max-width:600px){.marcas-logos{gap:0.4rem 0.75rem;}.marca-chip{font-size:0.88rem;padding:0.45rem 0.85rem;}}
+
+/* ── POR QUÉ NOSOTROS ── */
+.porq{padding:6rem 2.5rem;max-width:1280px;margin:0 auto;}
+.porq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:4rem;}
+.porq-card{
+  padding:1.75rem;
+  background:var(--gray-1);border:1px solid var(--gray-2);
+  border-radius:16px;
+  transition:border-color 0.2s,box-shadow 0.2s,transform 0.2s,background 0.2s;
+}
+.porq-card:hover{border-color:rgba(26,86,219,0.2);box-shadow:0 8px 32px rgba(0,0,0,0.07);transform:translateY(-3px);background:white;}
+.porq-icon{width:46px;height:46px;background:var(--blue-light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;}
+.porq-icon svg{width:20px;height:20px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.porq-title{font-size:0.95rem;font-weight:500;color:var(--ink);margin-bottom:0.4rem;}
+.porq-desc{font-size:0.82rem;font-weight:300;color:var(--ink-2);line-height:1.6;}
+@media(max-width:900px){.porq-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.porq-grid{grid-template-columns:1fr;}}
+
+/* ── GARANTÍA ── */
+.garantia{
+  background:linear-gradient(135deg,#0a1929 0%,#0f2044 50%,#1a3b8f 100%);
+  padding:6rem 2.5rem;position:relative;overflow:hidden;
+}
+.garantia::before{content:'';position:absolute;top:-120px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(96,165,250,0.08) 0%,transparent 70%);border-radius:50%;}
+.garantia::after{content:'';position:absolute;bottom:-80px;left:-60px;width:350px;height:350px;background:radial-gradient(circle,rgba(26,86,219,0.12) 0%,transparent 70%);border-radius:50%;}
+.garantia-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:1;}
+.garantia .section-tag{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.9);border:1px solid rgba(255,255,255,0.15);}
+.garantia .section-h2{color:white;}
+.garantia .section-h2 em{color:#93c5fd;}
+.garantia .section-sub{color:rgba(255,255,255,0.65);margin-bottom:2rem;}
+.garantia-bullets{display:flex;flex-direction:column;gap:0.75rem;}
+.garantia-bullet{display:flex;align-items:center;gap:0.75rem;color:rgba(255,255,255,0.85);font-size:0.88rem;}
+.garantia-bullet svg{width:16px;height:16px;stroke:#4ade80;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
+.garantia-cards{display:flex;flex-direction:column;gap:1rem;}
+.garantia-card{
+  background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);
+  border-radius:16px;padding:1.4rem 1.6rem;
+  display:flex;align-items:flex-start;gap:1rem;
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  transition:background 0.2s,border-color 0.2s;
+}
+.garantia-card:hover{background:rgba(255,255,255,0.09);border-color:rgba(255,255,255,0.18);}
+.garantia-card-emoji{font-size:1.65rem;flex-shrink:0;}
+.garantia-card-title{font-size:0.92rem;font-weight:500;color:white;margin-bottom:0.25rem;}
+.garantia-card-desc{font-size:0.8rem;color:rgba(255,255,255,0.6);line-height:1.5;}
+@media(max-width:900px){.garantia-inner{grid-template-columns:1fr;gap:3rem;}}
+
+/* ── HAMBURGER ── */
+.nav-hamburger{
+  display:none;background:none;border:none;cursor:pointer;
+  padding:0.4rem;flex-direction:column;justify-content:center;gap:5px;
+}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform 0.3s ease,opacity 0.3s ease;}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mobile-menu{
+  display:none;position:fixed;top:68px;left:0;right:0;z-index:199;
+  background:white;border-bottom:1px solid var(--gray-2);
+  box-shadow:0 8px 32px rgba(0,0,0,0.1);
+  flex-direction:column;padding:0.5rem 1.5rem 1.5rem;
+}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{
+  display:block;padding:0.9rem 0;
+  color:var(--ink-2);text-decoration:none;font-size:0.95rem;
+  border-bottom:1px solid var(--gray-2);transition:color 0.2s;
+}
+.mobile-menu a:hover{color:var(--blue);}
+@media(max-width:900px){.nav-hamburger{display:flex;}}
+
+/* reviews 6-item override */
+@media(max-width:900px){.reviews-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.reviews-grid{grid-template-columns:1fr;}}
+
 /* ── INTRO LOADER ── */
 #intro {
   position:fixed;inset:0;z-index:9999;
@@ -1135,17 +1284,36 @@ footer{
   <div class="intro-bar"><div class="intro-bar-fill"></div></div>
 </div>
 
+<!-- OFERTA BAR -->
+<div class="oferta-bar">
+  🎁 <strong>Primera visita gratuita</strong> · Sin coste de desplazamiento en todo el Gran Bilbao · <a href="tel:+34670641530">Llama ahora · 670 641 530</a>
+</div>
+
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">Fontanería <b>Integral</b></a>
   <ul class="nav-menu">
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#club">Club 50€</a></li>
-    <li><a href="#tarifas">Tarifas</a></li>
+    <li><a href="#garantia">Garantía</a></li>
     <li><a href="#testimonios">Opiniones</a></li>
     <li><a href="tel:+34670641530" class="nav-btn">📞 670 641 530</a></li>
   </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#servicios">Servicios</a>
+  <a href="#club">Club 50€</a>
+  <a href="#garantia">Garantía</a>
+  <a href="#testimonios">Opiniones</a>
+  <a href="#faq">FAQ</a>
+  <a href="tel:+34670641530" class="nav-btn" style="margin-top:0.75rem;text-align:center;justify-content:center;">📞 670 641 530</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -1312,6 +1480,40 @@ footer{
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM11.999 0C5.373 0 0 5.373 0 12c0 2.117.554 4.107 1.523 5.832L.057 23.486a.5.5 0 00.613.612l5.701-1.456A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.626 0 11.999 0zm.001 21.818a9.799 9.799 0 01-5.015-1.378l-.36-.213-3.733.954.984-3.68-.233-.372A9.799 9.799 0 012.182 12c0-5.413 4.406-9.818 9.818-9.818 5.413 0 9.818 4.405 9.818 9.818 0 5.412-4.405 9.818-9.818 9.818z"/></svg>
 </a>
 
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-strip-inner">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div>
+        <div class="trust-label">Seguro RC</div>
+        <div class="trust-sub">Responsabilidad civil</div>
+      </div>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+      <div>
+        <div class="trust-label">Técnicos certificados</div>
+        <div class="trust-sub">Gas Natural · Fontanería</div>
+      </div>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      <div>
+        <div class="trust-label">Garantía 1 año</div>
+        <div class="trust-sub">En todos los trabajos</div>
+      </div>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <div>
+        <div class="trust-label">Urgencias 24h</div>
+        <div class="trust-sub">365 días al año</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- ══ SERVICIOS ══ -->
 <section class="servicios" id="servicios">
@@ -1505,6 +1707,23 @@ footer{
 </section>
 
 
+<!-- MARCAS -->
+<div class="marcas">
+  <div class="marcas-inner">
+    <div class="marcas-title">Trabajamos con las mejores marcas</div>
+    <div class="marcas-logos">
+      <span class="marca-chip">Junkers</span>
+      <span class="marca-chip">Vaillant</span>
+      <span class="marca-chip">Roca</span>
+      <span class="marca-chip">Grohe</span>
+      <span class="marca-chip">Saunier Duval</span>
+      <span class="marca-chip">Baxi</span>
+      <span class="marca-chip">Hansgrohe</span>
+      <span class="marca-chip">Ferroli</span>
+    </div>
+  </div>
+</div>
+
 <!-- ══ CLUB DE MANTENIMIENTO ══ -->
 <section class="club" id="club">
   <div class="club-inner">
@@ -1590,6 +1809,32 @@ footer{
   </div>
 </section>
 
+<!-- ESTADÍSTICAS -->
+<section class="stats-section">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <span class="stat-num" data-target="500">500<span class="stat-suffix">+</span></span>
+      <span class="stat-accent"></span>
+      <div class="stat-label">Trabajos completados</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="8">8<span class="stat-suffix"> años</span></span>
+      <span class="stat-accent"></span>
+      <div class="stat-label">De experiencia</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">4.9<span class="stat-suffix">/5</span></span>
+      <span class="stat-accent"></span>
+      <div class="stat-label">Valoración media Google</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="30">30<span class="stat-suffix"> min</span></span>
+      <span class="stat-accent"></span>
+      <div class="stat-label">Tiempo de respuesta</div>
+    </div>
+  </div>
+</section>
+
 <!-- ══ PROCESO ══ -->
 <section class="proceso" id="proceso">
   <div class="proceso-header">
@@ -1621,6 +1866,47 @@ footer{
       <div class="step-title">Trabajo de calidad</div>
       <p class="step-desc">Ejecutamos con los mejores materiales y dejamos la zona limpia al acabar.</p>
       <span class="step-badge">Garantizado</span>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ NOSOTROS -->
+<section class="porq" id="porq">
+  <div class="section-header">
+    <div class="section-tag">Nuestros compromisos</div>
+    <h2 class="section-h2">¿Por qué elegir<br><em>Fontanería Integral?</em></h2>
+    <p class="section-sub">Seis razones por las que más de 500 familias del Gran Bilbao nos han elegido.</p>
+  </div>
+  <div class="porq-grid">
+    <div class="porq-card">
+      <div class="porq-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <div class="porq-title">Presupuesto 100% gratuito</div>
+      <p class="porq-desc">El técnico acude a domicilio, evalúa el problema y entrega un presupuesto cerrado sin ningún coste ni compromiso previo.</p>
+    </div>
+    <div class="porq-card">
+      <div class="porq-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <div class="porq-title">Respuesta en 30 minutos</div>
+      <p class="porq-desc">Técnicos repartidos por todo el Gran Bilbao para llegar a tu domicilio en el menor tiempo posible.</p>
+    </div>
+    <div class="porq-card">
+      <div class="porq-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+      <div class="porq-title">Precio cerrado, sin sorpresas</div>
+      <p class="porq-desc">El precio que aceptas antes de empezar es el precio final. Sin costes ocultos, sin letras pequeñas.</p>
+    </div>
+    <div class="porq-card">
+      <div class="porq-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div class="porq-title">Garantía de 1 año</div>
+      <p class="porq-desc">Todos los trabajos incluyen garantía de 1 año en materiales y mano de obra. Si algo falla, volvemos gratis.</p>
+    </div>
+    <div class="porq-card">
+      <div class="porq-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+      <div class="porq-title">Técnicos certificados</div>
+      <p class="porq-desc">Fontaneros con certificación oficial y seguro de responsabilidad civil activo. Profesionales de verdad.</p>
+    </div>
+    <div class="porq-card">
+      <div class="porq-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <div class="porq-title">Sin coste de desplazamiento</div>
+      <p class="porq-desc">En todo el Gran Bilbao el desplazamiento es gratuito. Más de 30 municipios cubiertos sin cargo adicional.</p>
     </div>
   </div>
 </section>
@@ -1688,6 +1974,60 @@ footer{
           </div>
         </div>
       </div>
+
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Instalaron la caldera nueva en un día. Limpiaron todo perfectamente y el precio fue muy ajustado para la calidad del trabajo. Muy recomendables."</p>
+        <div class="review-author">
+          <div class="review-avatar">MG</div>
+          <div>
+            <div class="review-name">María G.</div>
+            <div class="review-meta">Leioa · hace 2 meses</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Desatasco complicado en la terraza que otros no podían solucionar. Estos lo resolvieron en 45 minutos. Servicio impecable y educadísimos."</p>
+        <div class="review-author">
+          <div class="review-avatar">JL</div>
+          <div>
+            <div class="review-name">Javier L.</div>
+            <div class="review-meta">Basauri · hace 1 mes</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Detectaron una fuga detrás de la pared sin hacer obras. Alucinante la tecnología que usan. Rapidísimos, educados y muy buen precio."</p>
+        <div class="review-author">
+          <div class="review-avatar">IE</div>
+          <div>
+            <div class="review-name">Itziar E.</div>
+            <div class="review-meta">Getxo · hace 3 semanas</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="reviews-cta">
@@ -1701,6 +2041,65 @@ footer{
         4.9 · 7 reseñas verificadas en Google
       </div>
       <a href="https://g.page/r/fontaneriaintegral/review" class="btn-primary">Dejar una reseña</a>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTÍA -->
+<section class="garantia" id="garantia">
+  <div class="garantia-inner">
+    <div>
+      <div class="section-tag">Nuestro compromiso</div>
+      <h2 class="section-h2">Trabajo garantizado<br><em>o repetimos gratis</em></h2>
+      <p class="section-sub">Todos los trabajos incluyen garantía de 1 año en materiales y mano de obra. Si algo falla, volvemos sin coste adicional.</p>
+      <div class="garantia-bullets">
+        <div class="garantia-bullet">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Garantía de 1 año en materiales y mano de obra
+        </div>
+        <div class="garantia-bullet">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Seguro de responsabilidad civil activo
+        </div>
+        <div class="garantia-bullet">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Empresa registrada y certificada
+        </div>
+        <div class="garantia-bullet">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Factura oficial en todos los trabajos
+        </div>
+      </div>
+    </div>
+    <div class="garantia-cards">
+      <div class="garantia-card">
+        <div class="garantia-card-emoji">🛡️</div>
+        <div>
+          <div class="garantia-card-title">Garantía en reparaciones</div>
+          <div class="garantia-card-desc">Cada reparación garantizada 12 meses. Piezas y mano de obra incluidas sin coste extra.</div>
+        </div>
+      </div>
+      <div class="garantia-card">
+        <div class="garantia-card-emoji">📋</div>
+        <div>
+          <div class="garantia-card-title">Presupuesto siempre por escrito</div>
+          <div class="garantia-card-desc">Recibes el presupuesto detallado antes de que empecemos. Sin sorpresas al finalizar el trabajo.</div>
+        </div>
+      </div>
+      <div class="garantia-card">
+        <div class="garantia-card-emoji">🔒</div>
+        <div>
+          <div class="garantia-card-title">Factura oficial garantizada</div>
+          <div class="garantia-card-desc">Siempre emitimos factura oficial. Protege tu hogar y facilita cualquier reclamación al seguro.</div>
+        </div>
+      </div>
+      <div class="garantia-card">
+        <div class="garantia-card-emoji">📞</div>
+        <div>
+          <div class="garantia-card-title">Soporte post-servicio</div>
+          <div class="garantia-card-desc">Puedes llamarnos durante el período de garantía por cualquier duda. Siempre respondemos.</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1819,6 +2218,33 @@ footer{
         </button>
         <div class="faq-a">
           <div class="faq-a-inner">No pasa. El presupuesto es cerrado — el precio que aceptas es el precio final. Si durante el trabajo surge algo imprevisto, te lo comunicamos antes de continuar y decides.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          ¿Qué garantía tienen los trabajos?
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Todos nuestros trabajos tienen garantía de 1 año en materiales y mano de obra. Si algo falla en ese período, volvemos sin coste adicional para ti.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          ¿Emitís factura oficial?
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Siempre emitimos factura oficial desglosada. Es importante para reclamaciones al seguro del hogar y para la garantía del trabajo realizado.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          ¿Hay algún coste por la primera visita?
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">No. La primera visita es completamente gratuita, sin coste de desplazamiento en todo el Gran Bilbao. El técnico acude, evalúa y entrega presupuesto sin ningún cargo.</div>
         </div>
       </div>
     </div>
@@ -1971,6 +2397,49 @@ footer{
 
 
 <script>
+// Hamburger menu
+var hamburger = document.getElementById('hamburger');
+var mobileMenu = document.getElementById('mobile-menu');
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    });
+  });
+}
+
+// Animated counters
+function animateCounter(el) {
+  var target = parseInt(el.getAttribute('data-target'));
+  if (!target) return;
+  var suffix = el.querySelector('.stat-suffix') ? el.querySelector('.stat-suffix').outerHTML : '';
+  var duration = 1800;
+  var start = Date.now();
+  el.innerHTML = '0' + suffix;
+  var timer = setInterval(function() {
+    var elapsed = Date.now() - start;
+    var progress = Math.min(elapsed / duration, 1);
+    var ease = 1 - Math.pow(1 - progress, 3);
+    el.innerHTML = Math.round(ease * target) + suffix;
+    if (progress >= 1) clearInterval(timer);
+  }, 16);
+}
+var statsSection = document.querySelector('.stats-section');
+if (statsSection) {
+  var counted = false;
+  new IntersectionObserver(function(entries) {
+    if (entries[0].isIntersecting && !counted) {
+      counted = true;
+      document.querySelectorAll('.stat-num[data-target]').forEach(animateCounter);
+    }
+  }, {threshold: 0.3}).observe(statsSection);
+}
+
 // FAQ accordion
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.faq-q').forEach(function(btn) {
