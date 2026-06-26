@@ -68,3 +68,25 @@ window.addEventListener('load', function() {
     }, 1600);
   }
 });
+
+// Modals
+function openModal(id) {
+  var el = document.getElementById(id);
+  if (el) { el.classList.add('active'); document.body.style.overflow = 'hidden'; }
+}
+function closeModal(id) {
+  var el = document.getElementById(id);
+  if (el) { el.classList.remove('active'); document.body.style.overflow = ''; }
+}
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('modal-overlay')) {
+    closeModal(e.target.id);
+  }
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.active').forEach(function(m) {
+      closeModal(m.id);
+    });
+  }
+});
