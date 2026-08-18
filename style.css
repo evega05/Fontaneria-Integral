@@ -58,6 +58,7 @@ nav{
   padding:68px 2rem 9rem;
   overflow:hidden;
   text-align:center;
+  background:#040a1a;
 }
 
 /* video de fondo a pantalla completa */
@@ -274,6 +275,7 @@ nav{
   nav{padding:0 1rem;}
   .nav-menu{display:none;}
   .hero{min-height:100svh;padding:100px 1.5rem 15rem;}
+  .hero-video{object-fit:contain;}
   .hero-strip{grid-template-columns:1fr 1fr;}
   .strip-item:nth-child(2){border-right:none;}
   .strip-item:nth-child(3){border-top:1px solid var(--gray-2);}
@@ -474,94 +476,6 @@ nav{
   transition:background 0.2s,color 0.2s,transform 0.15s;
 }
 .btn-outline:hover{background:var(--blue);color:white;transform:translateY(-1px);}
-
-/* ══════════════════════════════════
-   CLUB DE MANTENIMIENTO
-══════════════════════════════════ */
-.club{
-  background:var(--gray-1);
-  padding:6rem 2.5rem;
-}
-
-.club-inner{
-  max-width:1280px;margin:0 auto;
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:5rem;align-items:center;
-}
-
-.club-left .section-sub{margin-bottom:2rem;}
-
-.club-features{
-  display:flex;flex-direction:column;gap:1rem;
-  margin-bottom:2.5rem;
-}
-
-.club-feature{
-  display:flex;align-items:flex-start;gap:0.9rem;
-  padding:1rem 1.25rem;
-  background:white;border:1px solid var(--gray-2);
-  border-radius:12px;
-  transition:border-color 0.2s,box-shadow 0.2s;
-}
-.club-feature:hover{border-color:rgba(26,86,219,0.2);box-shadow:0 4px 16px rgba(0,0,0,0.06);}
-
-.feature-icon{
-  width:36px;height:36px;
-  background:var(--blue-light);border-radius:8px;
-  display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;
-}
-.feature-icon svg{width:18px;height:18px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
-
-.feature-title{font-size:0.9rem;font-weight:500;color:var(--ink);margin-bottom:0.2rem;}
-.feature-desc{font-size:0.8rem;font-weight:300;color:var(--ink-2);line-height:1.5;}
-
-/* Card precio */
-.price-card{
-  background:white;border:1px solid var(--gray-2);
-  border-radius:20px;padding:2.5rem;
-  box-shadow:0 8px 32px rgba(0,0,0,0.06);
-  position:relative;overflow:hidden;
-}
-
-.price-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:4px;
-  background:linear-gradient(to right,var(--blue),#60a5fa);
-}
-
-.price-tag{
-  display:inline-block;
-  background:var(--blue-light);color:var(--blue);
-  font-size:0.72rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;
-  padding:0.3rem 0.8rem;border-radius:100px;
-  margin-bottom:1.5rem;
-}
-
-.price-num{
-  font-family:'Instrument Serif',serif;
-  font-size:4rem;color:var(--ink);line-height:1;
-  margin-bottom:0.25rem;
-}
-.price-num span{font-size:1.5rem;vertical-align:super;color:var(--blue);}
-.price-per{font-size:0.85rem;color:var(--gray-3);margin-bottom:1.75rem;}
-
-.price-divider{height:1px;background:var(--gray-2);margin-bottom:1.75rem;}
-
-.price-includes{
-  display:flex;flex-direction:column;gap:0.75rem;
-  margin-bottom:2rem;
-}
-
-.price-include{
-  display:flex;align-items:center;gap:0.6rem;
-  font-size:0.88rem;color:var(--ink-2);
-}
-.price-include svg{width:16px;height:16px;stroke:#22c55e;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
-
-.price-note{
-  font-size:0.75rem;color:var(--gray-3);
-  text-align:center;margin-top:1rem;
-}
 
 /* ══════════════════════════════════
    PROCESO
@@ -971,12 +885,12 @@ footer{
 
 /* ── RESPONSIVE general ── */
 @media(max-width:900px){
-  .club-inner,.zonas-inner,.cita-inner{grid-template-columns:1fr;gap:3rem;}
+  .zonas-inner,.cita-inner{grid-template-columns:1fr;gap:3rem;}
   .steps{grid-template-columns:1fr 1fr;gap:2rem;}
   .steps::before{display:none;}
   .reviews-grid{grid-template-columns:1fr;}
   .footer-inner{grid-template-columns:1fr 1fr;gap:2rem;}
-  .club,.testimonios,.zonas,.faq,.cita,.proceso,.cta-banner{padding:4rem 1.25rem;}
+  .testimonios,.zonas,.faq,.cita,.proceso,.cta-banner{padding:4rem 1.25rem;}
   .form-row{grid-template-columns:1fr;}
   .servicios{padding:4rem 1.25rem;}
   .services-grid{grid-template-columns:1fr 1fr;}
