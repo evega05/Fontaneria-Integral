@@ -1372,3 +1372,31 @@ footer{
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+/* =========================================
+   FLOATING PRESUPUESTO BUTTON
+   ========================================= */
+.floating-presupuesto-btn {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  color: #0f172a;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.floating-presupuesto-btn:hover {
+  transform: translateX(-50%) translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
