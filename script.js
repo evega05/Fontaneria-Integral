@@ -105,3 +105,27 @@ document.addEventListener('keydown', function(e) {
     });
   }
 });
+
+// Exit-intent popup ("¿Te vas sin presupuesto?")
+(function() {
+  var exitModal = document.getElementById('modal-exit');
+  if (!exitModal) return;
+
+  function triggerExit() {
+    if (sessionStorage.getItem('exitModalShown')) return;
+    sessionStorage.setItem('exitModalShown', '1');
+    openModal('modal-exit');
+  }
+
+  // Escritorio: el cursor sale por la parte superior de la ventana
+  document.addEventListener('mouseout', function(e) {
+    if (!e.relatedTarget && e.clientY <= 0) triggerExit();
+  });
+
+  // Móvil: el usuario baja bastante y luego vuelve rápido arriba del todo
+  var maxScroll = 0;
+  window.addEventListener('scroll', function() {
+    maxScroll = Math.max(maxScroll, window.scrollY);
+    if (maxScroll > 600 && window.scrollY < 50) triggerExit();
+  }, { passive: true });
+})();
