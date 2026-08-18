@@ -363,12 +363,12 @@ nav{
 .svc-card:hover .svc-photo{filter:brightness(1.08);}
 
 /* Gradientes únicos por servicio */
-.svc-photo--averia    { background: linear-gradient(135deg, rgba(15,32,68,0.7) 0%, rgba(26,86,219,0.7) 100%), url('./assets/averia.jpg') center/cover; }
-.svc-photo--desatasco { background: linear-gradient(135deg, rgba(6,78,59,0.7) 0%, rgba(5,150,105,0.7) 100%), url('./assets/desatasco.jpg') center/cover; }
-.svc-photo--caldera   { background: linear-gradient(135deg, rgba(124,45,18,0.7) 0%, rgba(234,88,12,0.7) 100%), url('./assets/caldera.jpg') center/cover; }
-.svc-photo--instalacion{ background: linear-gradient(135deg, rgba(30,58,95,0.7) 0%, rgba(59,130,246,0.7) 100%), url('./assets/instalacion.jpg') center/cover; }
-.svc-photo--reforma   { background: linear-gradient(135deg, rgba(45,27,105,0.7) 0%, rgba(124,58,237,0.7) 100%), url('./assets/reforma.jpg') center/cover; }
-.svc-photo--fugas     { background: linear-gradient(135deg, rgba(12,74,110,0.7) 0%, rgba(14,165,233,0.7) 100%), url('./assets/fugas.jpg') center/cover; }
+.svc-photo--averia    { background: url('./assets/averia.jpg') center/cover; }
+.svc-photo--desatasco { background: url('./assets/desatasco.jpg') center/cover; }
+.svc-photo--caldera   { background: url('./assets/caldera.jpg') center/cover; }
+.svc-photo--instalacion{ background: url('./assets/instalacion.jpg') center/cover; }
+.svc-photo--reforma   { background: url('./assets/reforma.jpg') center/cover; }
+.svc-photo--fugas     { background: url('./assets/fugas.jpg') center/cover; }
 
 /* Patrón de fondo sutil */
 .svc-photo::before{
@@ -380,27 +380,13 @@ nav{
 
 /* Icono SVG decorativo centrado */
 .svc-photo-icon{
-  position:absolute;
-  bottom:-20px; right:-20px;
-  opacity:0.15;
-  pointer-events:none;
-  transition:opacity 0.3s,transform 0.3s;
-}
-.svc-card:hover .svc-photo-icon{ opacity:0.22; transform:scale(1.05); }
-.svc-photo-icon svg{
-  width:180px;height:180px;
-  fill:white;stroke:none;
+  display: none !important;
 }
 
 /* Emoji centrado como elemento visual principal */
 .svc-photo-emoji{
-  font-size:3.5rem;
-  position:relative;
-  z-index:1;
-  filter:drop-shadow(0 4px 12px rgba(0,0,0,0.3));
-  transition:transform 0.3s;
+  display: none !important;
 }
-.svc-card:hover .svc-photo-emoji{ transform:scale(1.1) translateY(-3px); }
 
 .svc-badge{
   position:absolute;top:1rem;left:1rem;
