@@ -275,7 +275,6 @@ nav{
   nav{padding:0 1rem;}
   .nav-menu{display:none;}
   .hero{min-height:100svh;padding:100px 1.5rem 15rem;}
-  .hero-video{object-fit:contain;}
   .hero-strip{grid-template-columns:1fr 1fr;}
   .strip-item:nth-child(2){border-right:none;}
   .strip-item:nth-child(3){border-top:1px solid var(--gray-2);}
