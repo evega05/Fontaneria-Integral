@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -215,7 +215,7 @@
   <div class="services-grid">
 
     <!-- 1. Averías -->
-    <a href="tel:+34691470530" class="svc-card">
+    <a href="#" onclick="openPresupuestoModal(event)" class="svc-card open-modal-btn">
       <div class="svc-photo svc-photo--averia">
         <span class="svc-photo-emoji">🔧</span>
         <div class="svc-photo-icon">
@@ -243,7 +243,7 @@
     </a>
 
     <!-- 2. Desatascos -->
-    <a href="tel:+34691470530" class="svc-card">
+    <a href="#" onclick="openPresupuestoModal(event)" class="svc-card open-modal-btn">
       <div class="svc-photo svc-photo--desatasco">
         <span class="svc-photo-emoji">🌀</span>
         <div class="svc-photo-icon">
@@ -271,7 +271,7 @@
     </a>
 
     <!-- 3. Calderas -->
-    <a href="tel:+34691470530" class="svc-card">
+    <a href="#" onclick="openPresupuestoModal(event)" class="svc-card open-modal-btn">
       <div class="svc-photo svc-photo--caldera">
         <span class="svc-photo-emoji">🔥</span>
         <div class="svc-photo-icon">
@@ -299,7 +299,7 @@
     </a>
 
     <!-- 4. Instalaciones -->
-    <a href="tel:+34691470530" class="svc-card">
+    <a href="#" onclick="openPresupuestoModal(event)" class="svc-card open-modal-btn">
       <div class="svc-photo svc-photo--instalacion">
         <span class="svc-photo-emoji">🏗️</span>
         <div class="svc-photo-icon">
@@ -328,7 +328,7 @@
     </a>
 
     <!-- 5. Reformas -->
-    <a href="tel:+34691470530" class="svc-card">
+    <a href="#" onclick="openPresupuestoModal(event)" class="svc-card open-modal-btn">
       <div class="svc-photo svc-photo--reforma">
         <span class="svc-photo-emoji">🛁</span>
         <div class="svc-photo-icon">
@@ -358,7 +358,7 @@
     </a>
 
     <!-- 6. Detección fugas -->
-    <a href="tel:+34691470530" class="svc-card">
+    <a href="#" onclick="openPresupuestoModal(event)" class="svc-card open-modal-btn">
       <div class="svc-photo svc-photo--fugas">
         <span class="svc-photo-emoji">🔍</span>
         <div class="svc-photo-icon">
@@ -927,6 +927,95 @@
   </div>
 </div>
 
+
+<!-- MODAL DE PRESUPUESTO MULTI-PASO -->
+<div class="modal-overlay" id="modal-presupuesto">
+  <div class="modal-presupuesto-box">
+    <button class="modal-presupuesto-close" onclick="closeModal('modal-presupuesto')" aria-label="Cerrar">&times;</button>
+    
+    <div class="modal-p-header" id="mp-header">
+      <div class="modal-p-step-text">PASO <span id="mp-step-num">1</span> DE 3</div>
+      <h2 class="modal-p-title" id="mp-title">Servicio</h2>
+      <div class="modal-p-progress">
+        <div class="mp-bar active" id="mp-bar-1"></div>
+        <div class="mp-bar" id="mp-bar-2"></div>
+        <div class="mp-bar" id="mp-bar-3"></div>
+      </div>
+    </div>
+
+    <div class="modal-p-body">
+      <!-- PASO 1 -->
+      <div class="mp-step active" id="mp-step-1">
+        <p class="mp-question">¿Qué tipo de trabajo necesitas?</p>
+        <div class="mp-services-grid">
+          <div class="mp-service-card" onclick="selectService(this, 'Averías')">
+            <span class="mp-svc-icon">🔧</span>
+            <span class="mp-svc-name">Averías</span>
+          </div>
+          <div class="mp-service-card" onclick="selectService(this, 'Desatascos')">
+            <span class="mp-svc-icon">🌀</span>
+            <span class="mp-svc-name">Desatascos</span>
+          </div>
+          <div class="mp-service-card" onclick="selectService(this, 'Calderas')">
+            <span class="mp-svc-icon">🔥</span>
+            <span class="mp-svc-name">Calderas</span>
+          </div>
+          <div class="mp-service-card" onclick="selectService(this, 'Instalaciones')">
+            <span class="mp-svc-icon">🏗️</span>
+            <span class="mp-svc-name">Instalaciones</span>
+          </div>
+          <div class="mp-service-card" onclick="selectService(this, 'Reformas')">
+            <span class="mp-svc-icon">🛁</span>
+            <span class="mp-svc-name">Reformas</span>
+          </div>
+          <div class="mp-service-card" onclick="selectService(this, 'Fugas')">
+            <span class="mp-svc-icon">🔍</span>
+            <span class="mp-svc-name">Fugas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PASO 2 -->
+      <div class="mp-step" id="mp-step-2">
+        <label class="mp-label">DESCRIBE EL TRABAJO</label>
+        <textarea id="mp-desc" class="mp-textarea" placeholder="Ej: Tengo una fuga bajo el lavabo, lleva días goteando..."></textarea>
+        
+        <label class="mp-label">MUNICIPIO</label>
+        <input type="text" id="mp-municipio" class="mp-input" placeholder="Selecciona tu municipio (Ej: Bilbao, Barakaldo...)">
+        
+        <label class="mp-checkbox-label">
+          <input type="checkbox" id="mp-urgente">
+          <span class="mp-checkbox-text">Es urgente (necesito atención lo antes posible)</span>
+        </label>
+      </div>
+
+      <!-- PASO 3 -->
+      <div class="mp-step" id="mp-step-3">
+        <p class="mp-info-text">Te contactaremos para enviarte presupuestos verificados de profesionales de tu zona.</p>
+        
+        <label class="mp-label">NOMBRE</label>
+        <input type="text" id="mp-nombre" class="mp-input" placeholder="Tu nombre">
+        
+        <label class="mp-label">TELÉFONO</label>
+        <input type="tel" id="mp-telefono" class="mp-input" placeholder="+34 6XX XXX XXX">
+        
+        <p class="mp-legal-text">Tus datos solo se usan para enviarte presupuestos. No compartimos tu información con terceros sin tu consentimiento.</p>
+      </div>
+      
+      <!-- PASO 4 (Éxito) -->
+      <div class="mp-step" id="mp-step-4">
+        <div class="mp-success-icon">✅</div>
+        <h3 class="mp-success-title">¡Solicitud enviada!</h3>
+        <p class="mp-info-text" style="text-align:center;">Un fontanero de tu zona se pondrá en contacto contigo en breve al teléfono indicado.</p>
+      </div>
+    </div>
+
+    <div class="modal-p-footer" id="mp-footer">
+      <button class="mp-btn-back" id="mp-btn-back" onclick="prevStep()">← Atrás</button>
+      <button class="mp-btn-next" id="mp-btn-next" onclick="nextStep()" disabled>Continuar →</button>
+    </div>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
