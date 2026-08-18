@@ -59,6 +59,21 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Hero video autoplay fallback (iOS Low Power Mode / Android data saver block autoplay)
+var heroVideo = document.querySelector('.hero-video');
+if (heroVideo) {
+  var tryPlayHeroVideo = function() {
+    heroVideo.muted = true;
+    var playPromise = heroVideo.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(function() {});
+    }
+  };
+  tryPlayHeroVideo();
+  document.addEventListener('touchstart', tryPlayHeroVideo, { once: true, passive: true });
+  document.addEventListener('click', tryPlayHeroVideo, { once: true });
+}
+
 // Intro loader
 window.addEventListener('load', function() {
   var intro = document.getElementById('intro');
