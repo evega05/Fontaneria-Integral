@@ -75,7 +75,12 @@
 <!-- HERO -->
 <section class="hero">
 
-  <div class="hero-left">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto">
+    <source src="assets/video/hero-fontanero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
     <div class="hero-badge">
       <span class="badge-dot"></span>
       Disponible ahora · Gran Bilbao
@@ -133,55 +138,6 @@
         Precio cerrado
       </span>
     </div>
-  </div>
-
-  <!-- DERECHA — tarjetas flotantes glassmorphism -->
-  <div class="hero-right">
-    <video class="hero-video" autoplay muted loop playsinline preload="auto">
-      <source src="assets/video/hero-fontanero.mp4" type="video/mp4">
-    </video>
-    <div class="hero-visual">
-
-      <!-- Tarjeta 1: urgencia en curso -->
-      <div class="hero-cards">
-        <div class="hc">
-          <div class="hc-icon">⚡</div>
-          <div style="flex:1">
-            <div class="hc-title">Urgencia recibida</div>
-            <div class="hc-sub">Técnico asignado · ahora</div>
-            <div class="hc-bar"><div class="hc-bar-fill"></div></div>
-          </div>
-          <div class="hc-end"><span class="live-dot"></span></div>
-        </div>
-
-        <!-- Tarjeta 2: técnico en camino -->
-        <div class="hc">
-          <div class="hc-icon">🛠️</div>
-          <div style="flex:1">
-            <div class="hc-title">Técnico en camino</div>
-            <div class="hc-sub">Llega en ~18 minutos</div>
-          </div>
-          <div class="hc-end" style="font-family:'Instrument Serif',serif;font-size:1.3rem;opacity:0.9;">18'</div>
-        </div>
-
-        <!-- Tarjeta 3: reseña -->
-        <div class="hc">
-          <div style="flex:1">
-            <div class="hc-stars">
-              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            </div>
-            <div class="hc-title">"Rapidísimos, 10 de 10"</div>
-            <div class="hc-sub">Carlos M. · Bilbao</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <div class="hero-visual-fade"></div>
   </div>
 
   <!-- STRIP INFERIOR -->
