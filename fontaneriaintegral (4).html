@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Fontanería Integral — Fontaneros en Bilbao. Urgencias 24h, presupuesto gratuito, respuesta en 30 minutos en todo el Gran Bilbao.">
-<title>Fontanería Integral | Fontaneros en Bilbao · 24h · 670 641 530</title>
+<title>Fontanería Integral | Fontaneros en Bilbao · 24h · 691 470 530</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
@@ -464,12 +464,12 @@ nav{
 .svc-card:hover .svc-photo{filter:brightness(1.08);}
 
 /* Gradientes únicos por servicio */
-.svc-photo--averia    { background:linear-gradient(135deg,#0f2044 0%,#1a56db 100%); }
-.svc-photo--desatasco { background:linear-gradient(135deg,#064e3b 0%,#059669 100%); }
-.svc-photo--caldera   { background:linear-gradient(135deg,#7c2d12 0%,#ea580c 100%); }
-.svc-photo--instalacion{ background:linear-gradient(135deg,#1e3a5f 0%,#3b82f6 100%); }
-.svc-photo--reforma   { background:linear-gradient(135deg,#2d1b69 0%,#7c3aed 100%); }
-.svc-photo--fugas     { background:linear-gradient(135deg,#0c4a6e 0%,#0ea5e9 100%); }
+.svc-photo--averia    { background: url('./assets/averia.jpg') center/cover; }
+.svc-photo--desatasco { background: url('./assets/desatasco.jpg') center/cover; }
+.svc-photo--caldera   { background: url('./assets/caldera.jpg') center/cover; }
+.svc-photo--instalacion{ background: url('./assets/instalacion.jpg') center/cover; }
+.svc-photo--reforma   { background: url('./assets/reforma.jpg') center/cover; }
+.svc-photo--fugas     { background: url('./assets/fugas.jpg') center/cover; }
 
 /* Patrón de fondo sutil */
 .svc-photo::before{
@@ -481,27 +481,13 @@ nav{
 
 /* Icono SVG decorativo centrado */
 .svc-photo-icon{
-  position:absolute;
-  bottom:-20px; right:-20px;
-  opacity:0.15;
-  pointer-events:none;
-  transition:opacity 0.3s,transform 0.3s;
-}
-.svc-card:hover .svc-photo-icon{ opacity:0.22; transform:scale(1.05); }
-.svc-photo-icon svg{
-  width:180px;height:180px;
-  fill:white;stroke:none;
+  display: none !important;
 }
 
 /* Emoji centrado como elemento visual principal */
 .svc-photo-emoji{
-  font-size:3.5rem;
-  position:relative;
-  z-index:1;
-  filter:drop-shadow(0 4px 12px rgba(0,0,0,0.3));
-  transition:transform 0.3s;
+  display: none !important;
 }
-.svc-card:hover .svc-photo-emoji{ transform:scale(1.1) translateY(-3px); }
 
 .svc-badge{
   position:absolute;top:1rem;left:1rem;
@@ -1143,7 +1129,7 @@ footer{
     <li><a href="#club">Club 50€</a></li>
     <li><a href="#tarifas">Tarifas</a></li>
     <li><a href="#testimonios">Opiniones</a></li>
-    <li><a href="tel:+34670641530" class="nav-btn">📞 670 641 530</a></li>
+    <li><a href="tel:+34691470530" class="nav-btn">📞 691 470 530</a></li>
   </ul>
 </nav>
 
@@ -1163,7 +1149,7 @@ footer{
     </h1>
 
     <p class="hero-sub">
-      Más de 500 familias y empresas confían en nosotros. Presupuesto cerrado antes de empezar, técnicos certificados y respuesta en menos de 30 minutos.
+      Más de 500 familias y empresas confían en nosotros. Presupuesto detallado antes de empezar, técnicos certificados y respuesta en menos de 30 minutos.
     </p>
 
     <div class="hero-reviews">
@@ -1178,13 +1164,13 @@ footer{
     </div>
 
     <div class="hero-ctas">
-      <a href="tel:+34670641530" class="btn-primary">
+      <a href="tel:+34691470530" class="btn-primary">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/>
         </svg>
-        Llamar ahora · 670 641 530
+        Llamar ahora · 691 470 530
       </a>
-      <a href="https://wa.me/34670641530" class="btn-wa">
+      <a href="https://wa.me/34691470530" class="btn-wa">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM11.999 0C5.373 0 0 5.373 0 12c0 2.117.554 4.107 1.523 5.832L.057 23.486a.5.5 0 00.613.612l5.701-1.456A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.626 0 11.999 0zm.001 21.818a9.799 9.799 0 01-5.015-1.378l-.36-.213-3.733.954.984-3.68-.233-.372A9.799 9.799 0 012.182 12c0-5.413 4.406-9.818 9.818-9.818 5.413 0 9.818 4.405 9.818 9.818 0 5.412-4.405 9.818-9.818 9.818z"/></svg>
         WhatsApp
       </a>
@@ -1203,10 +1189,7 @@ footer{
         <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
         Sin coste desplazamiento
       </span>
-      <span class="pill">
-        <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-        Precio cerrado
-      </span>
+
     </div>
   </div>
 
@@ -1264,7 +1247,7 @@ footer{
       </div>
       <div>
         <div class="strip-title">Presupuesto gratuito</div>
-        <div class="strip-sub">Sin compromiso · Precio cerrado</div>
+        <div class="strip-sub">Totalmente sin compromiso</div>
       </div>
     </div>
     <div class="strip-item">
@@ -1302,13 +1285,13 @@ footer{
 <div class="ticker">
   <span class="ticker-dot"></span>
   Disponible ahora ·
-  <a href="tel:+34670641530">670 641 530</a>
+  <a href="tel:+34691470530">691 470 530</a>
   &nbsp;·&nbsp;
-  <a href="https://wa.me/34670641530">WhatsApp</a>
+  <a href="https://wa.me/34691470530">WhatsApp</a>
 </div>
 
 <!-- WHATSAPP -->
-<a href="https://wa.me/34670641530" class="wa" aria-label="WhatsApp">
+<a href="https://wa.me/34691470530" class="wa" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM11.999 0C5.373 0 0 5.373 0 12c0 2.117.554 4.107 1.523 5.832L.057 23.486a.5.5 0 00.613.612l5.701-1.456A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.626 0 11.999 0zm.001 21.818a9.799 9.799 0 01-5.015-1.378l-.36-.213-3.733.954.984-3.68-.233-.372A9.799 9.799 0 012.182 12c0-5.413 4.406-9.818 9.818-9.818 5.413 0 9.818 4.405 9.818 9.818 0 5.412-4.405 9.818-9.818 9.818z"/></svg>
 </a>
 
@@ -1324,7 +1307,7 @@ footer{
   <div class="services-grid">
 
     <!-- 1. Averías -->
-    <a href="tel:+34670641530" class="svc-card">
+    <a href="#" onclick="openPresupuestoModal(event)" class="svc-card open-modal-btn">
       <div class="svc-photo svc-photo--averia">
         <span class="svc-photo-emoji">🔧</span>
         <div class="svc-photo-icon">
@@ -1352,7 +1335,7 @@ footer{
     </a>
 
     <!-- 2. Desatascos -->
-    <a href="tel:+34670641530" class="svc-card">
+    <a href="#" onclick="openPresupuestoModal(event)" class="svc-card open-modal-btn">
       <div class="svc-photo svc-photo--desatasco">
         <span class="svc-photo-emoji">🌀</span>
         <div class="svc-photo-icon">
@@ -1380,7 +1363,7 @@ footer{
     </a>
 
     <!-- 3. Calderas -->
-    <a href="tel:+34670641530" class="svc-card">
+    <a href="#" onclick="openPresupuestoModal(event)" class="svc-card open-modal-btn">
       <div class="svc-photo svc-photo--caldera">
         <span class="svc-photo-emoji">🔥</span>
         <div class="svc-photo-icon">
@@ -1408,7 +1391,7 @@ footer{
     </a>
 
     <!-- 4. Instalaciones -->
-    <a href="tel:+34670641530" class="svc-card">
+    <a href="#" onclick="openPresupuestoModal(event)" class="svc-card open-modal-btn">
       <div class="svc-photo svc-photo--instalacion">
         <span class="svc-photo-emoji">🏗️</span>
         <div class="svc-photo-icon">
@@ -1437,7 +1420,7 @@ footer{
     </a>
 
     <!-- 5. Reformas -->
-    <a href="tel:+34670641530" class="svc-card">
+    <a href="#" onclick="openPresupuestoModal(event)" class="svc-card open-modal-btn">
       <div class="svc-photo svc-photo--reforma">
         <span class="svc-photo-emoji">🛁</span>
         <div class="svc-photo-icon">
@@ -1467,7 +1450,7 @@ footer{
     </a>
 
     <!-- 6. Detección fugas -->
-    <a href="tel:+34670641530" class="svc-card">
+    <a href="#" onclick="openPresupuestoModal(event)" class="svc-card open-modal-btn">
       <div class="svc-photo svc-photo--fugas">
         <span class="svc-photo-emoji">🔍</span>
         <div class="svc-photo-icon">
@@ -1498,8 +1481,8 @@ footer{
   </div>
 
   <div class="services-cta">
-    <a href="tel:+34670641530" class="btn-outline">
-      ¿No ves tu problema? Llámanos y lo resolvemos · 670 641 530
+    <a href="tel:+34691470530" class="btn-outline">
+      ¿No ves tu problema? Llámanos y lo resolvemos · 691 470 530
     </a>
   </div>
 </section>
@@ -1581,8 +1564,8 @@ footer{
             Sin desplazamiento en Gran Bilbao
           </div>
         </div>
-        <a href="tel:+34670641530" class="btn-primary" style="width:100%;justify-content:center;">
-          Contratar ahora · 670 641 530
+        <a href="tel:+34691470530" class="btn-primary" style="width:100%;justify-content:center;">
+          Contratar ahora · 691 470 530
         </a>
         <p class="price-note">También por WhatsApp · Activación inmediata</p>
       </div>
@@ -1612,9 +1595,9 @@ footer{
     </div>
     <div class="step">
       <div class="step-num">3</div>
-      <div class="step-title">Presupuesto cerrado</div>
-      <p class="step-desc">Precio fijo antes de empezar. Sin sorpresas ni costes ocultos al final.</p>
-      <span class="step-badge">Precio fijo</span>
+      <div class="step-title">Presupuesto detallado</div>
+      <p class="step-desc">Te damos un presupuesto detallado antes de empezar para que sepas exactamente qué haremos.</p>
+      <span class="step-badge">Todo claro</span>
     </div>
     <div class="step">
       <div class="step-num">4</div>
@@ -1752,8 +1735,8 @@ footer{
         <span class="zona-stat-label">Municipios cubiertos</span>
         <span class="zona-stat-val">+30</span>
       </div>
-      <a href="tel:+34670641530" class="btn-primary" style="width:100%;justify-content:center;margin-top:0.5rem;">
-        Comprobar cobertura · 670 641 530
+      <a href="tel:+34691470530" class="btn-primary" style="width:100%;justify-content:center;margin-top:0.5rem;">
+        Comprobar cobertura · 691 470 530
       </a>
     </div>
   </div>
@@ -1773,7 +1756,7 @@ footer{
           <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
         <div class="faq-a">
-          <div class="faq-a-inner">Sí, completamente. Nuestro técnico acude a su domicilio, evalúa el problema y le entrega un presupuesto cerrado sin ningún coste ni compromiso.</div>
+          <div class="faq-a-inner">Sí, completamente. Nuestro técnico acude a su domicilio, evalúa el problema y le entrega un presupuesto detallado sin ningún coste ni compromiso.</div>
         </div>
       </div>
       <div class="faq-item">
@@ -1812,15 +1795,6 @@ footer{
           <div class="faq-a-inner">Sí, realizamos la reforma integral: demolición, fontanería, electricidad básica, alicatado, instalación de sanitarios y acabados finales. Todo en un solo contrato.</div>
         </div>
       </div>
-      <div class="faq-item">
-        <button class="faq-q">
-          ¿Qué pasa si el precio final es diferente al presupuesto?
-          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">No pasa. El presupuesto es cerrado — el precio que aceptas es el precio final. Si durante el trabajo surge algo imprevisto, te lo comunicamos antes de continuar y decides.</div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -1847,7 +1821,7 @@ footer{
         </div>
         <div class="cita-punto">
           <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-          Presupuesto cerrado antes de empezar
+          Presupuesto detallado antes de empezar
         </div>
       </div>
     </div>
@@ -1887,7 +1861,7 @@ footer{
         <textarea placeholder="Describe brevemente qué necesitas..."></textarea>
       </div>
 
-      <button class="btn-form" onclick="window.location.href='tel:+34670641530'">
+      <button class="btn-form" onclick="window.location.href='tel:+34691470530'">
         Enviar solicitud · Te llamamos hoy
       </button>
       <p class="form-nota">🔒 Tus datos están protegidos y nunca se comparten con terceros</p>
@@ -1901,8 +1875,8 @@ footer{
     <h2>¿Tienes una avería ahora mismo?</h2>
     <p>No esperes. Nuestros técnicos están disponibles ahora y llegan en menos de 30 minutos al Gran Bilbao.</p>
     <div class="cta-banner-btns">
-      <a href="tel:+34670641530" class="btn-white">📞 Llamar ahora · 670 641 530</a>
-      <a href="https://wa.me/34670641530" class="btn-white-outline">💬 WhatsApp</a>
+      <a href="tel:+34691470530" class="btn-white">📞 Llamar ahora · 691 470 530</a>
+      <a href="https://wa.me/34691470530" class="btn-white-outline">💬 WhatsApp</a>
     </div>
   </div>
 </div>
@@ -1912,11 +1886,11 @@ footer{
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="footer-logo">Fontanería <b>Integral</b></div>
-      <p class="footer-desc">Fontaneros certificados en el Gran Bilbao. Urgencias 24h, presupuesto gratuito y precio cerrado antes de empezar.</p>
+      <p class="footer-desc">Fontaneros certificados en el Gran Bilbao. Urgencias 24h y presupuesto gratuito antes de empezar.</p>
       <div class="footer-contact">
-        <a href="tel:+34670641530">
+        <a href="tel:+34691470530">
           <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/></svg>
-          670 641 530
+          691 470 530
         </a>
         <a href="mailto:edgarmathiasvegainsaurralde@gmail.com">
           <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -1955,8 +1929,8 @@ footer{
     <div class="footer-col">
       <h4>Contacto</h4>
       <ul>
-        <li><a href="tel:+34670641530">📞 670 641 530</a></li>
-        <li><a href="https://wa.me/34670641530">💬 WhatsApp</a></li>
+        <li><a href="tel:+34691470530">📞 691 470 530</a></li>
+        <li><a href="https://wa.me/34691470530">💬 WhatsApp</a></li>
         <li><a href="#cita">📋 Pedir cita</a></li>
         <li><a href="#">⭐ Google Maps</a></li>
       </ul>
@@ -1965,7 +1939,7 @@ footer{
 
   <div class="footer-bottom">
     <span class="footer-copy">© 2024 Fontanería Integral · Gran Bilbao · Todos los derechos reservados</span>
-    <span class="footer-copy">670 641 530 · Disponible 24h · 365 días</span>
+    <span class="footer-copy">691 470 530 · Disponible 24h · 365 días</span>
   </div>
 </footer>
 
