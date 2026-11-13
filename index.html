@@ -1,6 +1,35 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
 <head>
+<!-- Consentimiento (Consent Mode v2): todo denegado hasta que el usuario acepte -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500
+  });
+  try {
+    if (localStorage.getItem('fi_cookie_consent') === 'granted') {
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'analytics_storage': 'granted'
+      });
+    }
+  } catch (e) {}
+</script>
+<!-- Google tag (Google Ads) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-TWZNG438"></script>
+<script>
+  dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+  gtag('js', new Date());
+</script>
+
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -855,6 +884,8 @@
       <a href="#" onclick="openModal('modal-privacidad');return false;">Política de Privacidad</a>
       &nbsp;·&nbsp;
       <a href="#" onclick="openModal('modal-aviso');return false;">Aviso Legal</a>
+      &nbsp;·&nbsp;
+      <a href="#" onclick="showCookieBanner();return false;">Cookies</a>
     </span>
   </div>
 </footer>
@@ -876,7 +907,7 @@
     <h3>Derechos</h3>
     <p>Puede ejercer en cualquier momento sus derechos de acceso, rectificación, supresión, oposición, portabilidad y limitación del tratamiento escribiendo a <a href="mailto:fontap.spain@gmail.com">fontap.spain@gmail.com</a>, adjuntando copia de su DNI. También tiene derecho a presentar una reclamación ante la <a href="https://www.aepd.es" target="_blank" rel="noopener">Agencia Española de Protección de Datos</a>.</p>
     <h3>Cookies</h3>
-    <p>Este sitio web no utiliza cookies propias ni de terceros que requieran consentimiento.</p>
+    <p>Este sitio web no utiliza cookies propias. Con tu consentimiento, utiliza cookies de terceros de Google (Google Ads y etiquetas de medición) para medir el rendimiento de nuestra publicidad. Si pulsas &laquo;Rechazar&raquo; o no eliges, no se activan. Puedes cambiar tu decisión en cualquier momento desde el enlace &laquo;Cookies&raquo; del pie de página.</p>
   </div>
 </div>
 
@@ -1004,6 +1035,15 @@
       <button class="mp-btn-back" id="mp-btn-back" onclick="prevStep()">← Atrás</button>
       <button class="mp-btn-next" id="mp-btn-next" onclick="nextStep()" disabled>Continuar →</button>
     </div>
+  </div>
+</div>
+
+<!-- BANNER DE COOKIES -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies" hidden>
+  <p class="cookie-text">Usamos cookies de medición y publicidad (Google) para saber si nuestros anuncios funcionan. Puedes aceptarlas o rechazarlas; la web funciona igual. <a href="#" onclick="openModal('modal-privacidad');return false;">Más información</a></p>
+  <div class="cookie-actions">
+    <button type="button" class="cookie-btn cookie-reject" onclick="setCookieConsent(false)">Rechazar</button>
+    <button type="button" class="cookie-btn cookie-accept" onclick="setCookieConsent(true)">Aceptar</button>
   </div>
 </div>
 

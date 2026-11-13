@@ -280,3 +280,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+
+// Consentimiento de cookies (Consent Mode v2)
+function showCookieBanner() {
+  var b = document.getElementById('cookie-banner');
+  if (b) b.hidden = false;
+}
+function setCookieConsent(accepted) {
+  try { localStorage.setItem('fi_cookie_consent', accepted ? 'granted' : 'denied'); } catch (e) {}
+  var v = accepted ? 'granted' : 'denied';
+  if (typeof gtag === 'function') {
+    gtag('consent', 'update', {
+      'ad_storage': v,
+      'ad_user_data': v,
+      'ad_personalization': v,
+      'analytics_storage': v
+    });
+  }
+  var b = document.getElementById('cookie-banner');
+  if (b) b.hidden = true;
+}
+(function () {
+  var choice = null;
+  try { choice = localStorage.getItem('fi_cookie_consent'); } catch (e) {}
+  if (!choice) showCookieBanner();
+})();
